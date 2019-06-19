@@ -1,0 +1,4 @@
+AttributeError("'NoneType' object has no attribute 'select_one'")
+AttributeError("'NoneType' object has no attribute 'select_one'")
+AttributeError("'NoneType' object has no attribute 'select'")
+AttributeError("'NoneType' object has no attribute 'select_one'")
