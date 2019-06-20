@@ -1,59 +1,48 @@
-from neo4j.v1 import GraphDatabase, basic_auth
-
-driver = GraphDatabase.driver("bolt://localhost", auth=basic_auth("neo4j", "<password>"))
-session = driver.session()
-
-# Insert data
-insert_query = '''
-UNWIND {pairs} as pair
-MERGE (p1:Person {name:pair[0]})
-MERGE (p2:Person {name:pair[1]})
-MERGE (p1)-[:KNOWS]-(p2);
-'''
-
-data = [["Jim","Mike"],["Jim","Billy"],["Anna","Jim"],
-          ["Anna","Mike"],["Sally","Anna"],["Joe","Sally"],
-          ["Joe","Bob"],["Bob","Sally"]]
-
-session.run(insert_query, parameters={"pairs": data})
-
-# Friends of a friend
-
-foaf_query = '''
-MATCH (person:Person)-[:KNOWS]-(friend)-[:KNOWS]-(foaf) 
-WHERE person.name = {name}
-  AND NOT (person)-[:KNOWS]-(foaf)
-RETURN foaf.name AS name
-'''
-
-results = session.run(foaf_query, parameters={"name": "Joe"})
-for record in results:
-    print(record["name"])
+from neo4j import GraphDatabase, basic_auth
+import json
 
 
-# Common friends
+class DataProcesser(object):
 
-common_friends_query = """
-MATCH (user:Person)-[:KNOWS]-(friend)-[:KNOWS]-(foaf:Person)
-WHERE user.name = {user} AND foaf.name = {foaf}
-RETURN friend.name AS friend
-"""
+    def __init__(self):
+        self._neo4j_driver = GraphDatabase.driver('bolt://localhost:7687', auth=basic_auth('neo4j', 'root'))
+        self.data_path = './spider/data.txt'
 
-results = session.run(common_friends_query, parameters={"user": "Joe", "foaf": "Sally"})
-for record in results:
-    print(record["friend"])
+    def close(self):
+        if self._neo4j_driver and not self._neo4j_driver.closed():
+            self._neo4j_driver.close()
 
-# Connecting paths
+    def process_data(self):
+        with self._neo4j_driver.session() as session:
+            # 清空数据
+            session.write_transaction(self._clear_data)
+        pass
 
-connecting_paths_query = """
-MATCH path = shortestPath((p1:Person)-[:KNOWS*..6]-(p2:Person))
-WHERE p1.name = {name1} AND p2.name = {name2}
-RETURN path
-"""
+    def get_data(self):
+        with open(self.data_path, 'r', encoding='utf8') as file:
+            lt = []
+            line = file.readline()
+            while line:
+                print(line)
+                line_item = json.loads(line.strip())
+                lt.append(line_item)
+                line = file.readline()
+            return lt
 
-results = session.run(connecting_paths_query, parameters={"name1": "Joe", "name2": "Billy"})
-for record in results:
-    print (record["path"])
+    @staticmethod
+    def _insert_data(tx, data):
+        pass
+
+    @staticmethod
+    def _clear_data(tx):
+        tx.run('match ()-[r]-() delete r return count(r)')    # 删除关系
+        tx.run('match (a) delete a')    # 删除实体
+        count = tx.run('match (a) return count(a)').single()[0]
+        print('entity count: {}'.format(count))
+        if not count:
+            print('清空数据成功')
 
 
-session.close()
+if __name__ == '__main__':
+    data = DataProcesser().get_data()
+    print(data)

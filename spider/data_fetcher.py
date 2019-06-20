@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import os
-import time
-import traceback
+import json
 
 
 class DataFetcher:
@@ -46,7 +45,6 @@ class DataFetcher:
             if item.get_text().strip() == '下一页':
                 if item.get('href'):
                     self.parse_list(self.base_url + item.get('href'))
-                break
 
     def parse_detail(self, detail_url, model):
         try:

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a7b7e69-c792-4e42-aafb-270d65670ea4" name="Default Changelist" comment="" />
+    <list default="true" id="8a7b7e69-c792-4e42-aafb-270d65670ea4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/demo_data_inserter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_inserter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_inserter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spider/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/data_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/data_fetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/exception.txt" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,8 +16,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MilitaryKG$data_fetcher.coverage" NAME="data_fetcher Coverage Results" MODIFIED="1560853029184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/MilitaryKG$data_inserter.coverage" NAME="data_inserter Coverage Results" MODIFIED="1560930022103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$data_fetcher.coverage" NAME="data_fetcher Coverage Results" MODIFIED="1561024267934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$data_inserter.coverage" NAME="data_inserter Coverage Results" MODIFIED="1561020860404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$demo_data_inserter.coverage" NAME="demo_data_inserter Coverage Results" MODIFIED="1561018453722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$pytest_in_test_data_inserter_py.coverage" NAME="pytest in test_data_inserter.py Coverage Results" MODIFIED="1561014780278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="387465402">
@@ -22,24 +31,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="5" />
-          <entry key="txt" value="15" />
+          <entry key="py" value="15" />
+          <entry key="txt" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="5" />
+          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3579" />
+          <entry key="dummy" value="4" />
+          <entry key="py" value="6196" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3579" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="6196" />
         </counts>
       </usages-collector>
     </session>
@@ -49,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/data_fetcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+            <state relative-caret-position="380">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -61,8 +72,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_inserter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="230">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo_data_inserter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -82,11 +105,21 @@
       <find>split</find>
       <find>href</find>
       <find>鱼雷</find>
+      <find>123</find>
+      <find>__init__</find>
+      <find>&quot;</find>
+      <find>dumps</find>
+      <find>parse_list</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/test_data_inserter.py" />
+        <option value="$PROJECT_DIR$/demo_data_inserter.py" />
         <option value="$PROJECT_DIR$/spider/data_fetcher.py" />
         <option value="$PROJECT_DIR$/data_inserter.py" />
       </list>
@@ -99,9 +132,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1280" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -117,6 +149,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -143,6 +176,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
@@ -159,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_inserter">
+  <component name="RunManager" selected="Python.data_fetcher">
     <configuration name="data_fetcher" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MilitaryKG" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,14 +238,56 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="demo_data_inserter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MilitaryKG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_data_inserter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in demo_data_inserter.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MilitaryKG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/demo_data_inserter.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.data_fetcher" />
       <item itemvalue="Python.data_inserter" />
+      <item itemvalue="Python tests.pytest in demo_data_inserter.py" />
+      <item itemvalue="Python.demo_data_inserter" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.data_inserter" />
         <item itemvalue="Python.data_fetcher" />
+        <item itemvalue="Python.data_inserter" />
+        <item itemvalue="Python.demo_data_inserter" />
+        <item itemvalue="Python tests.pytest in demo_data_inserter.py" />
       </list>
     </recent_temporary>
   </component>
@@ -228,21 +304,51 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 10h 15m 17s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 10h 16m 43s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 10h 17m 20s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 10h 17m 41s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 10h 18m 48s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 15h 10m 16s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 15h 12m 38s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 15h 12m 50s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_inserter_py - 2019.06.20 at 15h 13m 00s.xml">
+      <configuration name="pytest in test_data_inserter.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16453674" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32871288" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32739726" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23762377" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -289,17 +395,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/data.txt">
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/neo4j/v1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/neo4j/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84615">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        <state relative-caret-position="52">
+          <caret line="190" column="8" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo_data_inserter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/data.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-60">
+          <caret line="206" column="1424" selection-start-line="206" selection-start-column="1424" selection-end-line="206" selection-end-column="1431" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="3957" column="310" selection-start-line="3957" selection-start-column="309" selection-end-line="3957" selection-end-column="310" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider/data_fetcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+        <state relative-caret-position="380">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -308,8 +436,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_inserter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="230">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
