@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import os
-import json
+import sys
+import re
 
 
 class DataFetcher:
@@ -22,15 +23,20 @@ class DataFetcher:
             self.parse_list(cls_url)
             # except Exception as e:
             #     self.dump_exception(repr(e))
+            # break
 
     def parse_list(self, url):
         page_content = requests.get(url).content
         bs = BeautifulSoup(page_content, "lxml")
-        for item in bs.select(".picList li"):
+        items = bs.select(".picList li")
+        if not items or not len(items):
+            print(items)
+            return
+        for item in items:
             pic_container = item.select_one('span.pic')
             detail_url = self.base_url + pic_container.select_one('a').get('href')
             print(detail_url)
-            model = {}
+            model = dict()
             # model['img_url'] = self.base_url + pic_container.select_one('a img').get('src')
             model['desc'] = pic_container.get_text()
             model['name'] = item.select_one('span.name a').get_text()
@@ -41,10 +47,20 @@ class DataFetcher:
             self.parse_detail(detail_url, model)
             # break
             # time.sleep(0.5)
-        for item in bs.select('div.pages a'):
-            if item.get_text().strip() == '下一页':
-                if item.get('href'):
-                    self.parse_list(self.base_url + item.get('href'))
+
+        re_resutlt = re.findall('\S+_(\d+)', url)
+        next_page = 2
+        if re_resutlt:
+            next_page = int(re_resutlt[0]) + 1
+
+        print(url)
+        page_suffix = re.findall('\S+(\/list_\S+)', url)
+        if page_suffix:
+            url = url.replace(page_suffix[0], '')
+        next_page_url = url + '/list_0_0_0_0_{}'.format(next_page)
+        print('next_page_url', next_page_url)
+        self.parse_list(next_page_url)
+
 
     def parse_detail(self, detail_url, model):
         try:
@@ -78,13 +94,21 @@ class DataFetcher:
             file.write(str(model))
             file.write('\n')
 
-    def dump_exception(self, e):
+    @staticmethod
+    def dump_exception(e):
         with open('./exception.txt', 'a+', encoding='utf8') as file:
             file.write(e)
             file.write('\n')
 
 
 if __name__ == "__main__":
+    sys.setrecursionlimit(100000)
     data_fetcher = DataFetcher()
     data_fetcher.start_request()
+    # url = "http://weapon.huanqiu.com//weaponlist/aircraft/list_0_0_0_0_12"
+    # print(re.findall('\S+_(\d+)', url))
+    # re.sub('\S+(\/list_\S+)', '', url)
+    # print(url)
+    # print(re.findall('\S+(\/list_\S+)',  url))
+    # print(url.replace(re.findall('\S+(\/list_\S+)',  url)[0], ''))
     # data_fetcher.parse_detail('http://weapon.huanqiu.com//m70', None)
