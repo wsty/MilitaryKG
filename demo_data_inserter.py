@@ -10,6 +10,9 @@ class HelloWorldExample:
         if self._driver:
             self._driver.close()
 
+    def __del__(self):
+        self.close()
+
     def print_greeting(self, message):
         with self._driver.session() as session:
             greeting = session.write_transaction(self._create_and_return_greeting, message)

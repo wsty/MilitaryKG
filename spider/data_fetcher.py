@@ -3,6 +3,7 @@ import requests
 import os
 import sys
 import re
+import json
 
 
 class DataFetcher:
@@ -54,7 +55,7 @@ class DataFetcher:
             next_page = int(re_resutlt[0]) + 1
 
         print(url)
-        page_suffix = re.findall('\S+(\/list_\S+)', url)
+        page_suffix = re.findall('\S+(/list_\S+)', url)
         if page_suffix:
             url = url.replace(page_suffix[0], '')
         next_page_url = url + '/list_0_0_0_0_{}'.format(next_page)
@@ -91,7 +92,7 @@ class DataFetcher:
     def save_data(self, model):
         print(model)
         with open(self.save_path, 'a+', encoding='utf8') as file:
-            file.write(str(model))
+            file.write(repr(model))
             file.write('\n')
 
     @staticmethod
