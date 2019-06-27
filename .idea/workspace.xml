@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a7b7e69-c792-4e42-aafb-270d65670ea4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/category_processer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spider/category_fetcher.py" afterDir="false" />
+    <list default="true" id="8a7b7e69-c792-4e42-aafb-270d65670ea4" name="Default Changelist" comment="neo4j初步入库">
+      <change afterPath="$PROJECT_DIR$/qa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category_processer.py" beforeDir="false" afterPath="$PROJECT_DIR$/category_processer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_inserter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_inserter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_data_inserter.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_data_inserter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/data_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/data_fetcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/exception.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spider/exception.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,34 +15,37 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MilitaryKG$data_fetcher.coverage" NAME="data_fetcher Coverage Results" MODIFIED="1561086353378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/MilitaryKG$category_processer.coverage" NAME="category_processer Coverage Results" MODIFIED="1561113318911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MilitaryKG$data_inserter.coverage" NAME="data_inserter Coverage Results" MODIFIED="1561105386584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$category_processer.coverage" NAME="category_processer Coverage Results" MODIFIED="1561342080136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$data_inserter.coverage" NAME="data_inserter Coverage Results" MODIFIED="1561340293602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MilitaryKG$demo_data_inserter.coverage" NAME="demo_data_inserter Coverage Results" MODIFIED="1561018453722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MilitaryKG$category_fetcher.coverage" NAME="category_fetcher Coverage Results" MODIFIED="1561108067797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/MilitaryKG$qa.coverage" NAME="qa Coverage Results" MODIFIED="1561370776070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MilitaryKG$pytest_in_test_data_inserter_py.coverage" NAME="pytest in test_data_inserter.py Coverage Results" MODIFIED="1561014780278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="387465402">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="11" />
-          <entry key="txt" value="7" />
+          <entry key="py" value="13" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="11" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3787" />
+          <entry key="py" value="7397" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3787" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="7397" />
         </counts>
       </usages-collector>
     </session>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_inserter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+            <state relative-caret-position="231">
+              <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -79,17 +79,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/category_processer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="231">
+              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spider/category.txt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            <state relative-caret-position="203">
+              <caret line="312" column="35" lean-forward="true" selection-start-line="312" selection-start-column="35" selection-end-line="312" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/spider/category_fetcher.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -149,6 +152,11 @@
       <find>轰-6</find>
       <find>list</find>
       <find>&quot;list&quot;</find>
+      <find>add_jieba</find>
+      <find>轰炸机</find>
+      <find>single</find>
+      <find>val</find>
+      <find>weapons</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,9 +168,10 @@
         <option value="$PROJECT_DIR$/test_data_inserter.py" />
         <option value="$PROJECT_DIR$/demo_data_inserter.py" />
         <option value="$PROJECT_DIR$/spider/data_fetcher.py" />
-        <option value="$PROJECT_DIR$/data_inserter.py" />
         <option value="$PROJECT_DIR$/spider/category_fetcher.py" />
+        <option value="$PROJECT_DIR$/qa.py" />
         <option value="$PROJECT_DIR$/category_processer.py" />
+        <option value="$PROJECT_DIR$/data_inserter.py" />
       </list>
     </option>
   </component>
@@ -235,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.category_processer">
+  <component name="RunManager" selected="Python.qa">
     <configuration name="category_fetcher" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MilitaryKG" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -324,7 +333,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_data_inserter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="qa" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MilitaryKG" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -337,7 +346,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_data_inserter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qa.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -349,17 +358,17 @@
     <list>
       <item itemvalue="Python.data_fetcher" />
       <item itemvalue="Python.data_inserter" />
-      <item itemvalue="Python.demo_data_inserter" />
       <item itemvalue="Python.category_fetcher" />
       <item itemvalue="Python.category_processer" />
+      <item itemvalue="Python.qa" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.qa" />
         <item itemvalue="Python.category_processer" />
-        <item itemvalue="Python.category_fetcher" />
         <item itemvalue="Python.data_inserter" />
+        <item itemvalue="Python.category_fetcher" />
         <item itemvalue="Python.data_fetcher" />
-        <item itemvalue="Python.demo_data_inserter" />
       </list>
     </recent_temporary>
   </component>
@@ -375,6 +384,14 @@
       <updated>1560823520914</updated>
       <workItem from="1561041473285" duration="10020000" />
     </task>
+    <task id="LOCAL-00001" summary="neo4j初步入库">
+      <created>1561113556609</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561113556609</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -449,6 +466,10 @@
       </list>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="neo4j初步入库" />
+    <option name="LAST_COMMIT_MESSAGE" value="neo4j初步入库" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MilitaryKG$data_fetcher.coverage" NAME="data_fetcher Coverage Results" MODIFIED="1561052232804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
   </component>
@@ -476,25 +497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/neo4j/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="711" selection-start-line="711" selection-end-line="711" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/1493201921/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="4941" column="8" selection-start-line="4941" selection-start-column="8" selection-end-line="4941" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/data.txt">
-      <provider editor-type-id="LargeFileEditor" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="1613" column="81" selection-start-line="1613" selection-start-column="81" selection-end-line="1613" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -529,26 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_inserter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/category_fetcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo_data_inserter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -556,17 +542,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/category_processer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/category.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
+          <caret column="62" selection-start-column="62" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/category_fetcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/data.txt">
+      <provider editor-type-id="LargeFileEditor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="2068" column="498" selection-start-line="2068" selection-start-column="498" selection-end-line="2068" selection-end-column="498" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/neo4j/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="537" selection-start-line="537" selection-end-line="537" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="312" column="35" lean-forward="true" selection-start-line="312" selection-start-column="35" selection-end-line="312" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_processer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_inserter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -35,8 +35,9 @@ class DataProcesser(object):
 
     @staticmethod
     def _clear_data(tx):
-        tx.run('match ()-[r]-() delete r')    # 删除关系
-        tx.run('match (a) delete a')    # 删除实体
+        tx.run('match (n) '
+               'optional match (n)-[r]-() '
+               'delete n, r')    # 清空库
         count = tx.run('match (a) return count(a)').single().value()
         print('entity count: {}'.format(count))
         if not count:
@@ -48,10 +49,8 @@ class DataProcesser(object):
             key_value_lt = ["{key}:'{value}'".format(key=key.strip(), value=value.strip()) for key, value in item.items() if key != item['name']]
             print(item['name'])
 
-            result = tx.run('CREATE (a:{category} {{{item}}}) '
-                   'RETURN a.name'.format(category=item['category'].replace(' ', '').split('/')[0],
-                                          item=','.join(key_value_lt))
-                            )
+            result = tx.run('CREATE (a:军事武器 $item) '
+                   'RETURN a.name',item=','.join(key_value_lt))
             return result.single()[0]
         except:
             return ''

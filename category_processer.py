@@ -24,17 +24,25 @@ class CategoryProcesser(object):
 
     @staticmethod
     def _insert_data(tx, data):
-        # 插入大类及关系
+        # 插入类别及关系
         for key, value in data.items():
-            tx.run('CREATE (c:{big}) '.format(big=key))
+            tx.run('CREATE (c:大类) SET c.name="{big}"'.format(big=key))
+            for small_value in value:
+                tx.run('CREATE (c:小类 {name:$small})', small=small_value)
 
     @staticmethod
     def _insert_relationship(tx, data):
         for key, value in data.items():
-            tx.run('MATCH (c:{big}) '
-                   'MATCH (e) '
-                   'WHERE e.category in {small} '
-                   'MERGE (e)-[r:属于]->(c)'.format(big=key, small=str(list(value))))
+            tx.run('MATCH (s:小类) '
+                   'MATCH (b:大类) '
+                   'WHERE s.name in $small '
+                   'AND b.name=$big '
+                   'MERGE (s)-[r:属于]->(b)', big=key, small=str(list(value)))
+            for small_value in value:
+                tx.run('MATCH (c:小类 {name:$class_}) '
+                       'MATCH (w:军事武器) '
+                       'WHERE w.category=c.name '
+                       'MERGE (w)-[r:属于]->(c)', class_=small_value)
 
 
 if __name__ == '__main__':
